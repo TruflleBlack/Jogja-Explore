@@ -1,0 +1,754 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styling */
+header {
+    background: linear-gradient(90deg, #007BFF, #00C9A7); /* Gradien warna */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar .logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.navbar .logo a span {
+    color: #FFD700; /* Emas */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .nav-links li {
+    position: relative;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover,
+.navbar .nav-links li a.active {
+    color: #FFD700; /* Emas */
+}
+
+.navbar .nav-links li a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #FFD700; /* Efek garis bawah emas */
+    transition: width 0.3s ease;
+    margin: auto;
+}
+
+.navbar .nav-links li a:hover::after,
+.navbar .nav-links li a.active::after {
+    width: 100%; /* Animasi garis */
+}
+
+.nav-links .nav-item.active {
+    color: #FFD700; /* Warna emas */
+    font-weight: bold; /* Teks lebih tebal */
+    border-bottom: 2px solid #FFD700; /* Garis bawah */
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+}
+
+main {
+    padding: 2rem;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+[id] {
+    scroll-margin-top: 79px; /* Sesuaikan dengan tinggi navbar */
+}
+
+/* Bagian home */
+#home {
+    background: linear-gradient(to bottom, #f9f9f9, #e3e3e3); /* Gradien warna untuk latar */
+    padding: 3rem 1.5rem;
+    font-family: 'Arial', sans-serif;
+}
+
+#home .content {
+    display: flex;
+    flex-wrap: nowrap; 
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 20px;
+    justify-content: space-between; 
+}
+
+#home article {
+    flex: 1;
+    max-width: 600px;
+}
+
+#home article h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#home article p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+#home .welcome-message h1 {
+    font-size: 2.5rem; /* Ukuran font yang mencolok */
+    color: #333; /* Warna teks */
+    margin: 0;
+    text-align: center; /* Teks berada di tengah */
+}
+
+#home .welcome-message h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin: 1rem auto;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+}
+
+#home .welcome-message h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+}
+
+#home aside {
+    flex: 0 0 500px; /* Perbesar ukuran aside */
+    order: -1;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.4));
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#home aside:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+#home aside img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#home aside img:hover {
+    transform: scale(1.02);
+}
+
+/* General Carousel Styling */
+#kuliner {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#kuliner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+#kuliner p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#kuliner .carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+#kuliner .cards {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#kuliner .card {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    width: 250px; /* Fixed width for all cards */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: #e3e3e3;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#kuliner .card img {
+    width: 100%;
+    height: 250px; /* Set fixed height to make it square */
+    object-fit: cover; /* Ensures the image fits within the square while maintaining aspect ratio */
+    border-radius: 10px;
+}
+
+#kuliner .card h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#kuliner .map-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #F96E2A;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+#kuliner .map-btn:hover {
+    background: #FF9D3D;
+}
+
+/* Tombol Navigasi Lingkaran */
+#kuliner .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #F96E2A; /* Warna biru estetik */
+    color: white;
+    border: none;
+    font-size: 1.5rem; /* Ukuran simbol < dan > */
+    width: 50px; /* Diameter lingkaran */
+    height: 50px; /* Diameter lingkaran */
+    border-radius: 50%; /* Membuat tombol menjadi lingkaran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan untuk estetika */
+    transition: transform 0.3s ease, background 0.3s ease;
+    z-index: 10;
+}
+
+#kuliner .arrow:hover {
+    background: #FF9D3D; /* Warna lebih gelap saat hover */
+    transform: scale(1.1); /* Sedikit membesar saat hover */
+}
+
+/* Tombol kiri */
+#kuliner .arrow.left {
+    left: 10px; /* Jarak dari sisi kiri */
+}
+
+/* Tombol kanan */
+#kuliner .arrow.right {
+    right: 10px; /* Jarak dari sisi kanan */
+}
+
+
+/* Dots Navigation Styling */
+#kuliner .dots {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#kuliner .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e3e3e3;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#kuliner .dot.active {
+    background: #F96E2A;
+}
+
+/* Styling untuk ID "destinasi" */
+#destinasi .intro {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#destinasi h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+#destinasi p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#destinasi .carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#destinasi .cards {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+#destinasi .card {
+    flex: 0 0 250px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#destinasi .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#destinasi .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#destinasi .card h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+#destinasi .map-btn {
+    display: inline-block;
+    margin-bottom: 10px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+#destinasi .map-btn:hover {
+    background: #0056b3;
+}
+
+/* Tombol lingkaran untuk navigasi */
+#destinasi .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #007BFF;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+    z-index: 10;
+}
+
+#destinasi .arrow.left {
+    left: 10px;
+}
+
+#destinasi .arrow.right {
+    right: 10px;
+}
+
+#destinasi .arrow:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Dots navigasi */
+#destinasi .dots {
+    margin-top: 20px; /* Beri jarak antara gambar dan dot */
+    display: flex;
+    justify-content: center; /* Tengahkan dot */
+    gap: 0.5rem; /* Jarak antar dot */
+    position: relative; /* Atur posisi secara relatif */
+    bottom: 0; /* Pastikan berada di bawah */
+}
+#destinasi .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e3e3e3;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#destinasi .dot.active {
+    background: #007BFF;
+}
+
+#destinasi .dot:hover {
+    background: #0056b3;
+}
+
+/* Footer Styling yang Diperbaiki */
+footer {
+    background: linear-gradient(90deg, #007BFF, #00C9A7);
+    color: #fff;
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+.footer-section nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section nav ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 15px;
+}
+
+.footer-section nav ul li a:before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-section nav ul li a:hover {
+    color: #fff;
+    padding-left: 20px;
+}
+
+.footer-section nav ul li a:hover:before {
+    opacity: 1;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.social-links a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FFD700;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #FFD700;
+}
+
+.footer-bottom p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Media Queries untuk Responsivitas */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    #home article h1 {
+        font-size: 2rem;
+    }
+
+    #home article h2 {
+        font-size: 1.5rem;
+    }
+    
+    #kuliner .card {
+        flex: 0 0 250px;
+        border-radius: 10px;
+        background: #F96E2A;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    #kuliner .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #kuliner .cards {
+        width: 75%;
+        gap: 1px;
+    }
+
+    #destinasi .cards {
+        width: 90%;
+    }
+
+    #kuliner .dots,
+    #destinasi .dots {
+        display: none; /* Menyembunyikan dots */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Navbar responsif */
+    .burger {
+        display: flex;
+    }
+
+    .navbar .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #007BFF, #00C9A7);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    /* Home section responsif */
+    #home .content {
+        flex-direction: column;
+    }
+
+    #home article {
+        order: 1;
+        width: 100%;
+    }
+
+    #home aside {
+        order: 2; 
+        width: 100%;
+    }
+
+    #home aside img {
+        max-width: 80%; /* Membuat gambar sedikit lebih kecil */
+        height: auto;
+    }
+
+    #kuliner .card,
+    #destinasi .card {
+        flex: 0 0 200px;
+    }
+
+    #kuliner .card img {
+        height: 180px;
+    }
+
+    #kuliner .cards {
+        width: 65%;
+    }
+
+    #kuliner .dots,
+    #destinasi .dots {
+        display: none;
+    }
+
+    /* Footer responsif */
+    .footer-section {
+        text-align: center;
+        min-width: 100%;
+    }
+    
+    .footer-content {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Navbar */
+    .navbar .logo a {
+        font-size: 1.5rem;
+    }
+
+    /* Home section */
+    #home article h1 {
+        font-size: 1.8rem;
+    }
+
+    #home article h2 {
+        font-size: 1.3rem;
+    }
+
+    #home aside img {
+        max-width: 90%; /* Menyesuaikan ukuran gambar untuk layar mobile */
+    }
+
+    #kuliner .card,
+    #destinasi .card {
+        flex: 0 0 180px;
+    }
+
+    #kuliner .card img,
+    #destinasi .card img {
+        height: 160px;
+    }
+
+    #kuliner .cards,
+    #destinasi .cards {
+        width: 55%;
+    }
+
+    #kuliner .card h2,
+    #destinasi .card h2 {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    #kuliner .map-btn,
+    #destinasi .map-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    /* Carousel */
+    #kuliner .card,
+    #destinasi .card {
+        width: 180px;
+    }
+
+    #kuliner .arrow,
+    #destinasi .arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    #kuliner .dots,
+    #destinasi .dots {
+        display: none;
+    }
+
+    /* Footer */
+    footer .footer-logo h2 {
+        font-size: 1.5rem;
+    }
+}

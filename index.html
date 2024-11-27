@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jelajahi keindahan dan kuliner Yogyakarta">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <title>JogjaExplore - Jelajahi Yogyakarta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Jogja<span>Explore</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#kuliner" class="nav-item">Kuliner</a></li>
+                <li><a href="#destinasi" class="nav-item">Destinasi</a></li>
+            </ul>
+            <button class="burger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>    
+    
+     <!-- Main Content -->
+     <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="welcome-message">
+                <h1>Selamat Datang Di Daerah Istimewa Yogyakarta</h1>
+                <h2>Sejarah D.I.Yogyakarta</h2>
+            </div>
+            <div class="content">
+                <aside>
+                    <img src="image/diy.jpg" alt="Pemandangan Yogyakarta">
+                </aside>
+                <article>
+                    <h3>Zaman Kerajaan Mataram</h3>
+                    <p>Sejarah Yogyakarta sebagai daerah istimewa dimulai dari Kerajaan Mataram yang dibagi menjadi dua pada 13 Februari 1755. Pembagian ini dilakukan berdasarkan Perjanjian Giyanti yang ditandatangani oleh Kompeni Belanda. </p>
+
+                    <h3>Zaman Penjajahan</h3>
+                    <p>Selama masa penjajahan, Kasultanan Ngayogyakarta memiliki status sebagai "kerajaan vasal" yang memiliki hak untuk mengatur rumah tangga sendiri. Status ini disebut sebagai Zelfbestuurende Lanschappen oleh Belanda dan Koti/Kooti oleh Jepang.</p>
+
+                    <h3>Masa Kemerdekaan</h3>
+                    <p>Setelah Proklamasi Kemerdekaan Indonesia, Sri Sultan Hamengku Buwono IX dan Sri Paku Alam VIII menyatakan bahwa Daerah Kasultanan Ngayogyakarta Hadiningrat dan Daerah Kadipaten Pakualaman menjadi wilayah Negara RI. Kedua daerah tersebut kemudian bergabung menjadi satu kesatuan yang disebut sebagai DIY.</p>
+
+                    <h3>Pembentukan DIY</h3>
+                    <p>Pembentukan DIY secara resmi dilakukan pada tahun 1950. Dalam pembentukannya, DIY memiliki landasan hukum berupa UU Nomor 22 Tahun 1948 dan UU Nomor 3 Tahun 1950. </p>
+
+                    <h3>Pengisian jabatan</h3>
+                    <p>Hingga tahun 1988, Kepala Daerah Istimewa secara otomatis dijabat oleh Sultan Yogyakarta yang bertahta. Sementara Wakil Kepala Daerah Istimewa dijabat secara otomatis oleh Pangeran Paku Alam yang bertahta. Nomenklatur Gubernur dan Wakil Gubernur baru digunakan mulai tahun 1999.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Kuliner Section -->
+        <section id="kuliner" class="carousel">
+            <div class="intro">
+                <h2>Kuliner di D.I. Yogyakarta</h2>
+                <p>Yuk kita intip kuliner yang sering dikunjungi oleh warga Jogja dan wisatawan!</p>
+            </div>
+            <div class="carousel-container">
+                <button class="arrow left" aria-label="Previous" onclick="moveCarousel('kuliner', -1)">&#10094;</button>
+                <div class="cards">
+                    <div class="card">
+                        <img src="image/tengkleng.jpg" alt="Tengkleng Gajah">
+                        <h2>Tengkleng Gajah</h2>
+                        <a href="https://maps.app.goo.gl/peWSnmau8oemY3jz5" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/sotopd.jpg" alt="Soto Ayam Pak Dalbe">
+                        <h2>Soto Ayam Kampung Pak Dalbe</h2>
+                        <a href="https://maps.app.goo.gl/GE9VPUQU4R4TYzpv8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/Yammiepk.jpg" alt="Yammie Pathuk Kemetiran">
+                        <h2>Yammie Pathuk Kemetiran</h2>
+                        <a href="https://maps.app.goo.gl/DfsYqA5E6PyFbAar8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/osengmercon.jpg" alt="Oseng-oseng Mercon Bu Narti">
+                        <h2>Oseng-oseng Mercon Bu Narti</h2>
+                        <a href="https://maps.app.goo.gl/FFNSsQax9ar8ktqTA" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/sateratu.jpg" alt="Sate Ratu">
+                        <h2>Sate Ratu</h2>
+                        <a href="https://maps.app.goo.gl/eybfhiUZtkvafcxQ8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/gudegmercon.jpg" alt="Gudeg Mercon Bu Tinah">
+                        <h2>Gudeg Mercon Bu Tinah</h2>
+                        <a href="https://maps.app.goo.gl/VcfeuQS3LdXzkDBVA" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/ayamgeprek.jpg" alt="Ayam Geprek Bu Rum">
+                        <h2>Ayam Geprek Bu Rum</h2>
+                        <a href="https://maps.app.goo.gl/tsdTVps2iemhu3Mx7" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/ramentakoyaki.jpeg" alt="Takoyaki & Ramen Mr. Hiroshi">
+                        <h2>Takoyaki & Ramen Mr. Hiroshi</h2>
+                        <a href="https://maps.app.goo.gl/zBxiiL9fsrq8KGTu6" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/dimsummentai.jpeg" alt="Ninoms Dimsum Mentai">
+                        <h2>Ninoms Dimsum Mentai</h2>
+                        <a href="https://maps.app.goo.gl/KypDKQCdTVhyTAWEA" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/lumpiamasbi.jpeg" alt="Lumpia Masbi">
+                        <h2>Lumpia Masbi</h2>
+                        <a href="https://maps.app.goo.gl/oDCU8YoQNw7GMS6K9" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/hotplate.jpeg" alt="Tio Ciu Chinese Food Bang Sinyo">
+                        <h2>Tio Ciu Chinese Food Bang Sinyo</h2>
+                        <a href="https://maps.app.goo.gl/mqHEHRJrN7cUZXDy8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/ayambakaryanto.jpeg" alt="Ayam Bakar Pak Yanto">
+                        <h2>Ayam Bakar Pak Yanto</h2>
+                        <a href="https://maps.app.goo.gl/MnCo8QXLJiHYUvok8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/miegajah.jpeg" alt="Mie Sapi Gajahan">
+                        <h2>Mie Sapi Gajahan</h2>
+                        <a href="https://maps.app.goo.gl/qr7qwWQik8dDhdcdA" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/Kopi1.jpg" alt="Kopi Klotok">
+                        <h2>Kopi Klotok</h2>
+                        <a href="https://maps.app.goo.gl/nzcfoi82Zgg8xFNr8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/miebandung.jpeg" alt="Mie Bandung Kridosono">
+                        <h2>Mie Bandung Kridosono</h2>
+                        <a href="https://maps.app.goo.gl/RVpr3WrVzh5qUM4H6" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/bakpiakukus.jpg" alt="Bakpia Kukus Tugu Jogja">
+                        <h2>Bakpia Kukus Tugu Jogja</h2>
+                        <a href="https://maps.app.goo.gl/Zh2A5gxEgnV6QwWD7" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/siomaymirza.jpg" alt="Siomay Mirza">
+                        <h2>Siomay Mirza</h2>
+                        <a href="https://maps.app.goo.gl/AtDHB1PgEW1AGhd47" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/kuebalok.jpeg" alt="Kue Balok Parikesit">
+                        <h2>Kue Balok Parikesit</h2>
+                        <a href="https://maps.app.goo.gl/78yQUExibkK8have7" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/lumpiasamijaya.jpg" alt="Lumpia Samijaya">
+                        <h2>Lumpia Samijaya</h2>
+                        <a href="https://maps.app.goo.gl/Ty77DrEhJkF8QGJd9" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/sateklatak.jpg" alt="Sate Klatak Pak Pong">
+                        <h2>Sate Klatak Pak Pong</h2>
+                        <a href="https://maps.app.goo.gl/jrFmUTCzydV4Q357A" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/geplak.jpg" alt="jogja Geplak Mbok Tumpuk">
+                        <h2>jogja Geplak Mbok Tumpuk</h2>
+                        <a href="https://maps.app.goo.gl/wWEH1VVzCZJuHuqf6" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/esteler.jpg" alt="Es Teler Moerni 78">
+                        <h2>Es Teler Moerni 78</h2>
+                        <a href="https://maps.app.goo.gl/BmydZoU35UiUDuNC9" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                </div>
+                <button class="arrow right" aria-label="Next" onclick="moveCarousel('kuliner', 1)">&#10095;</button>
+            </div>
+            <div class="dots">
+                <span class="dot active" onclick="moveToSlide('kuliner', 0)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 1)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 2)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 3)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 4)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 5)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 6)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 7)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 8)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 9)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 10)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 11)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 12)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 13)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 14)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 15)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 16)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 17)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 18)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 19)"></span>
+                <span class="dot" onclick="moveToSlide('kuliner', 20)"></span>
+            </div>
+        </section>
+
+        <!-- Destinasi Section -->
+        <section id="destinasi" class="carousel">
+            <div class="intro">
+                <h2>Destinasi di D.I. Yogyakarta</h2>
+                <p>Kalian bingung mau refreshing? Yuk jalan-jalan ke Jogja saja!</p>
+            </div>
+            <div class="carousel-container">
+                <button class="arrow left" aria-label="Previous" onclick="moveCarousel('destinasi', -1)">&#10094;</button>
+                <div class="cards">
+                    <div class="card">
+                        <img src="image/prambanan.jpg" alt="Candi Prambanan">
+                        <h2>Candi Prambanan</h2>
+                        <a href="https://maps.app.goo.gl/KXfgSf8R9PRQd3fn8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/malioboro.png" alt="Malioboro">
+                        <h2>Malioboro</h2>
+                        <a href="https://maps.app.goo.gl/c8EfUh25jLwgqowz8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/obelix.jpg" alt="Obelix Sea View">
+                        <h2>Obelix Sea View</h2>
+                        <a href="https://maps.app.goo.gl/AvGj6Zxx2o1mWkaq7" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/tugu.jpg" alt="Tugu Jogja">
+                        <h2>Tugu Jogja</h2>
+                        <a href="https://maps.app.goo.gl/CqZKpGMUCR38Vgc59" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/tamansari.jpeg" alt="Taman Sari">
+                        <h2>Taman Sari</h2>
+                        <a href="https://maps.app.goo.gl/neZtq44c9E3F4Qqh6" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/hehasky.jpg" alt="HeHa Sky View">
+                        <h2>HeHa Sky View</h2>
+                        <a href="https://maps.app.goo.gl/pPdZtQQmSYSXgckN6" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/PantaiDrini.jpg" alt="Pantai Drini">
+                        <h2>Pantai Drini</h2>
+                        <a href="https://maps.app.goo.gl/PA2uRwCK5YsnRXH27" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/obelixhills.jpg" alt="Obelix Hills">
+                        <h2>Obelix Hills</h2>
+                        <a href="https://maps.app.goo.gl/fnuvnFnhQF9L3cA76" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/kidsfun.jpg" alt="Kids Fun">
+                        <h2>Kids Fun</h2>
+                        <a href="https://maps.app.goo.gl/WiQGaksAEZ2X3zqQ6" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/Parangtritis.jpg" alt="Pantai Parangtritis">
+                        <h2>Pantai Parangtritis</h2>
+                        <a href="https://maps.app.goo.gl/gCKYP9GrRUiS3h1Q8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+
+                    <div class="card">
+                        <img src="image/tebingbreksi.jpg" alt="Tebing Breksi">
+                        <h2>Tebing Breksi</h2>
+                        <a href="https://maps.app.goo.gl/pKtR5cyGi8Vow9nZ6" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/pantaislili.jpg" alt="Pantai Slili">
+                        <h2>Pantai Slili</h2>
+                        <a href="https://maps.app.goo.gl/5VALu9UdbmCBsWx39" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/pantaingobaran.jpg" alt="Pantai Ngobaran">
+                        <h2>Pantai Ngobaran</h2>
+                        <a href="https://maps.app.goo.gl/a5974kdRxP8joa7CA" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/gembiralokazoo.jpg" alt="Gembira Loka">
+                        <h2>Gembira Loka</h2>
+                        <a href="https://maps.app.goo.gl/jmns1dtmDNq5enXg9" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/tamanpintar.jpg" alt="Taman Pintar">
+                        <h2>Taman Pintar</h2>
+                        <a href="https://maps.app.goo.gl/wRHZFcLcqRuncSCF7" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/pantaiindrayanti.png" alt="Pantai Indrayanti">
+                        <h2>Pantai Indrayanti</h2>
+                        <a href="https://maps.app.goo.gl/hqZYVahLi5NHJdbZ8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/kaliurang.jpg" alt="Kaliurang">
+                        <h2>Kaliurang</h2>
+                        <a href="https://maps.app.goo.gl/mBWB3mRwhPziVWtX6" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/ratuboko.jpg" alt="Ratu Boko">
+                        <h2>Ratu Boko</h2>
+                        <a href="https://maps.app.goo.gl/eYPmtYu2qXLkQ2vK6" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/goapindul.jpg" alt="Goa Pindul">
+                        <h2>Goa Pindul</h2>
+                        <a href="https://maps.app.goo.gl/X5VtbNcupwTe1SXV8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/PantaiKukup.jpg" alt="Pantai Kukup">
+                        <h2>Pantai Kukup</h2>
+                        <a href="https://maps.app.goo.gl/VycjE5jkYapTM83W7" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/CandiPlaosan.jpg" alt="Candi Plaosan">
+                        <h2>Candi Plaosan</h2>
+                        <a href="https://maps.app.goo.gl/WHMz2fxexJ6Yynas8" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/KeratonYogyakarta.jpeg" alt="Keraton Yogyakarta">
+                        <h2>Keraton Yogyakarta</h2>
+                        <a href="https://maps.app.goo.gl/KugZ3k2vMwTtrdni7" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/CandiIjo.jpg" alt="Candi Ijo">
+                        <h2>Candi Ijo</h2>
+                        <a href="https://maps.app.goo.gl/GvVRSr2qSAMJqUo6A" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/BukitBintang.jpg" alt="Bukit Bintang">
+                        <h2>Bukit Bintang</h2>
+                        <a href="https://maps.app.goo.gl/tsMiTa2eoG7bRP8s7" target="_blank" class="map-btn">Maps</a>
+                    </div>
+                </div>
+                <button class="arrow right" aria-label="Next" onclick="moveCarousel('destinasi', 1)">&#10095;</button>
+            </div>
+            <div class="dots">
+                <span class="dot active" onclick="moveToSlide('destinasi', 0)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 1)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 2)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 3)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 4)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 5)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 6)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 7)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 8)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 9)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 10)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 11)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 12)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 13)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 14)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 15)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 16)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 17)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 18)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 19)"></span>
+                <span class="dot" onclick="moveToSlide('destinasi', 20)"></span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JogjaExplore</h3>
+                <p>Menjelajahi keindahan dan kekayaan budaya Yogyakarta bersama kami.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Menu</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#kuliner">Kuliner</a></li>
+                        <li><a href="#destinasi">Destinasi</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Ikuti Kami</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 JogjaExplore. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
