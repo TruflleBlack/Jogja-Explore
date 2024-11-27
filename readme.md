@@ -89,7 +89,7 @@ Proyek ini dikembangkan oleh:
 **Rizqulloh Rifqi Edwanto**
 - Pengembang Utama
 - Email: rizqulloh@gmail.com
-- GitHub: [@rizqulloh](https://github.com/rizqulloh)
+- GitHub: [@rizqulloh](https://github.com/TruflleBlack)
 
 ## 📞 Kontak
 
@@ -98,12 +98,4 @@ Proyek ini dikembangkan oleh:
 - LinkedIn: [Rizqulloh Rifqi Edwanto](https://www.linkedin.com/in/rizqulloh-rifqi-edwanto/)
 
 ---
-
-<div align="center">
-  <img src="assets/images/footer-banner.png" alt="Footer Banner" width="100%">
-  
-  ### 🌟 Dibuat dengan ❤️ di Yogyakarta 🌟
-  
-  [⬆ Kembali ke Atas](#jogjaexplore---jelajahi-keindahan-yogyakarta)
-</div>
 
